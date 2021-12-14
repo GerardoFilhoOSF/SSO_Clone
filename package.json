@@ -1,0 +1,61 @@
+{
+  "name": "cnp_al_corp_front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ds/react": "^2.0.6",
+    "@ds/tema-cnp": "^2.0.6",
+    "@react-keycloak/web": "^3.4.0",
+    "axios": "^0.21.3",
+    "keycloak-js": "^10.0.2",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.21.1",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.2.1",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "customize-cra": "^1.0.0",
+    "env-path": "^1.0.7",
+    "react-app-rewire-alias": "^1.0.3",
+    "react-app-rewired": "^2.1.8",
+    "react-scripts": "4.0.3"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "start:dev": "set REACT_APP_SKIP_AUTH=true && set REACT_APP_ENABLE_ALL_MOCKS=true && react-app-rewired start",
+    "build": "env-path -p .env.local react-app-rewired build",
+    "build:dev": "env-path -p .env.development react-app-rewired build",
+    "build:hom": "env-path -p .env.homologation react-app-rewired build",
+    "build:release": "env-path -p .env.release react-app-rewired build",
+    "build:prd": "env-path -p .env.production react-app-rewired build",
+    "test": "set CI=true && react-app-rewired test",
+    "test:watch": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

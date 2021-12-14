@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "config/*": ["./src/config/*"],
+      "bootstrap": ["./src/packages/bootstrap/src/index.js"],
+      "bootstrap/*": ["./src/packages/bootstrap/src/*"],
+      "dashboard": ["./src/packages/dashboard/src/index.js"],
+      "dashboard/*": ["./src/packages/dashboard/src/*"],
+      "cap": ["./src/packages/products/capitalization/src/index.js"],
+      "cap/*": ["./src/packages/products/capitalization/src/*"],
+      "shared/*": ["./src/packages/shared/*"]
+    }
+  }
+}

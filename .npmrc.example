@@ -1,0 +1,7 @@
+registry=https://devops.caixaseguros.intranet/ALM/_packaging/NPM_ALL/npm/registry/
+always-auth=true
+
+; Para realizar o download dos artefatos públicos ou privados armazenados no Azure DevOps Artifacts, será necessário a utilização dos seguintes itens: feed, registry e token para autenticação.
+; Para utilizar o feed, criar o token e colocar as informações de registry no arquivo “.npmrc” local, sigam os passos descritos no guia "Utilizar o Artifacts com NPM" disponível na Wiki do Portal.
+; Link do guia: http://devops.caixaseguros.intranet/ALM/Vitrine/_wiki/wikis/Wiki/25/Utilizar-o-Artifacts-com-NPM
+; As informações de autenticação não deverão ser versionadas ou compartilhadas, dessa forma, mantenha as mesmas apenas no seu repositório local.
