@@ -6,11 +6,23 @@ const LinksSection = () => {
   return (
     <S.Items>
       <S.Item data-label="footer cnp link">
-        {/* <Logo data-label="footer logo" /> */}
+        <Link variant="primary-sm-02-inverse" href="#" target="_blank">
+          A CNP Seguros Holding Brasil
+        </Link>
       </S.Item>
       <S.Item data-label="footer cnp link">
         <Link variant="primary-sm-02-inverse" href="#" target="_blank">
-          Sobre o Cap Vencedor
+          Produtos
+        </Link>
+      </S.Item>
+      <S.Item data-label="footer cnp link">
+        <Link variant="primary-sm-02-inverse" href="#" target="_blank">
+          Para empresas
+        </Link>
+      </S.Item>
+      <S.Item data-label="footer cnp link">
+        <Link variant="primary-sm-02-inverse" href="#" target="_blank">
+          Atendimento
         </Link>
       </S.Item>
       <S.Item data-label="footer privacidade link">
