@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const Header = styled.header(({ theme: { color } }) => ({
-  backgroundColor: color.brandPrimary.light,
+  backgroundColor: color.line.light,
 }));
 
 export const HeaderContent = styled.div(({ theme: { color, breakpoint } }) => ({
