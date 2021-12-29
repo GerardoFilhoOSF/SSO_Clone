@@ -69,7 +69,9 @@ const Login = () => {
               sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
             />
             <S.Button>
-              <Button variant="primary-01-md">Acessar</Button>
+              <Button variant="primary-01-md" className="primary">
+                Acessar
+              </Button>
             </S.Button>
             <S.Button>
               <Button variant="secondary-md" className="secondary">
