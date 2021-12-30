@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@ds/react";
 import { cnpSeguradora } from "@ds/tema-cnp";
-import LoginErro from "components/LoginErro/LoginErro";
+import ErrorBoundary from "components/ErrorBoundary";
 // import LoginPage from "./pages/LoginPage";
 
 // import Main from "./components/Main";
@@ -8,7 +8,7 @@ import LoginErro from "components/LoginErro/LoginErro";
 function App() {
   return (
     <ThemeProvider theme={cnpSeguradora}>
-      <LoginErro />
+      <ErrorBoundary />
       {/* <LoginPage /> */}
     </ThemeProvider>
   );
