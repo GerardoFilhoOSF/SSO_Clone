@@ -23,7 +23,7 @@ export const RegisterContent = styled.div(
 
 export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
   margin: "25px 10px 0",
 
   [breakpoint.lg()]: {
