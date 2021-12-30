@@ -1,33 +1,22 @@
 import styled from "styled-components/macro";
 
-export const Header = styled.header(({ theme: { color } }) => ({
-  backgroundColor: color.line.light,
-}));
-
-export const HeaderContent = styled.div(({ theme: { color, breakpoint } }) => ({
-  maxWidth: "1440px",
+export const Header = styled.div(({ theme: { breakpoint, spacing } }) => ({
   width: "100%",
-  margin: "auto",
-
   display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  height: "64px",
-
-  backgroundColor: color.line.light,
-
+  padding: "16px",
+  maxWidth: "1440px",
+  margin: "0 auto",
+  paddingTop: "30px",
   [breakpoint.lg()]: {
-    height: "100px",
+    padding: `2px ${spacing.stack.xl} ${spacing.stack["2xs"]} ${spacing.stack.xl}`,
+    paddingTop: "30px",
   },
 }));
-
-export const SectionMenu = styled.div(({ theme: { breakpoint, spacing } }) => ({
+export const Container = styled.div(() => ({
   display: "flex",
-  alignItems: "center",
-  padding: 0,
-  marginLeft: spacing.stack["3xs"],
-
-  [breakpoint.lg()]: {
-    marginLeft: spacing.stack.xl,
+  justifyContent: "flex-end",
+  width: "100%",
+  ".chatIcon": {
+    marginRight: "20px",
   },
 }));
