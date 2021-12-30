@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "@ds/react";
-import GeoTrustImage from "shared/react/assets/images/geotrust.png";
-import NortonImage from "shared/react/assets/images/norton.png";
+import GeoTrustImage from "./../../../assets/images/geotrust.png";
+import NortonImage from "./../../../assets/images/norton.png";
 import * as S from "./CertificateSection.style";
 
 const CertificateSection = () => {
