@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./../Logo";
+import { ReactComponent as CapLogo } from "./../../assets/images/Logo-CNP.svg";
 import * as S from "./Header.style";
 
 const Header = () => {
@@ -9,7 +10,9 @@ const Header = () => {
         <S.HeaderContent>
           <S.SectionMenu>
             <a href="/">
-              <Logo data-label="header home logo" />
+              <Logo data-label="header home logo">
+                <CapLogo />
+              </Logo>
             </a>
           </S.SectionMenu>
         </S.HeaderContent>

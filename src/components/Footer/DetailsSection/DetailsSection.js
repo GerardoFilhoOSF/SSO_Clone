@@ -6,21 +6,15 @@ const DetailsSection = () => {
   return (
     <S.Container>
       <Text variant="caption-02">
-        Caixa Capitalização S.A. – CNPJ: 01.599.296/0001-71. É proibida a venda
-        de título de capitalização a menores de 16 anos. – Art. 3º, I, do Código
-        Civil. Antes de contratar, consulte previamente as Condições Gerais.
-        PROC. SUSEP nº 15414.619616/2020-16 e PROC.SUSEP nº 15414.900328/2019-51
-        – Modalidade Tradicional. Cobertura de Risco garantida pela Caixa
-        Seguradora S.A. – CNPJ: 34.020.354/0001-10 – Proc. SUSEP
-        15414.001062/2003-03. A aprovação deste plano pela SUSEP não implica,
-        por parte da Autarquia, em incentivo ou recomendação à sua aquisição,
-        representando, exclusivamente, sua adequação às normas em vigor. As
-        condições contratuais deste produto encontram-se protocolizadas pela
-        sociedade/entidade junto à SUSEP e poderão ser consultadas no endereço
-        eletrônico www.susep.gov.br, de acordo com o número de processo
-        constante da proposta.
+        CNP Seguros Holding Brasil - CNPJ 34.020.354/0001-10
       </Text>
-      <Text variant="caption-02">© Copyright 2021 Cap Vencedor</Text>
+      <Text variant="caption-02">
+        Edifício Sede: SHN Quadra 01, Conjunto A, Bloco E, Brasília/DF - CEP:
+        70.701-050
+      </Text>
+      <Text variant="caption-02">
+        © Copyright 2017 CNP Seguros Holding Brasil
+      </Text>
     </S.Container>
   );
 };

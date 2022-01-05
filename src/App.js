@@ -1,16 +1,12 @@
 import { ThemeProvider } from "@ds/react";
 import { cnpSeguradora } from "@ds/tema-cnp";
-
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import DispositivoNaoAutorizado from "components/DispositivoNaoAutorizado";
+// import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
     <ThemeProvider theme={cnpSeguradora}>
-      <Header />
-      <Main />
-      <Footer />
+      <DispositivoNaoAutorizado />
     </ThemeProvider>
   );
 }
