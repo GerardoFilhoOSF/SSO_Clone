@@ -47,9 +47,13 @@ const Login = () => {
               iconLeft={<Password />}
               iconRight={
                 show ? (
-                  <Link variant="primary-sm-02"> Ocultar senha </Link>
+                  <Link variant="primary-sm-02" className="showPassword">
+                    Ocultar senha
+                  </Link>
                 ) : (
-                  <Link variant="primary-sm-02"> Mostrar senha </Link>
+                  <Link variant="primary-sm-02" className="showPassword">
+                    Mostrar senha
+                  </Link>
                 )
               }
               placeholder="Senha"
@@ -62,10 +66,12 @@ const Login = () => {
             >
               Esqueci minha senha
             </Link>
-            <Recaptcha
-              className="recaptcha"
-              sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
-            />
+            <S.Recaptcha>
+              <Recaptcha
+                className="recaptcha"
+                sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
+              />
+            </S.Recaptcha>
             <S.Button>
               <Button variant="primary-01-md" className="primary">
                 Acessar

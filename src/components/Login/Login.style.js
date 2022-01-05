@@ -29,7 +29,7 @@ export const LoginContent = styled.div(
     paddingBottom: spacing.stack["2xs"],
 
     [breakpoint.lg()]: {
-      padding: `2px ${spacing.stack.xl} ${spacing.stack["2xs"]} ${spacing.stack.xl}`,
+      padding: `2px ${spacing.inline["7xl"]} ${spacing.stack["2xs"]} ${spacing.stack.xl}`,
     },
   })
 );
@@ -66,6 +66,9 @@ export const Grid = styled(DSGrid)(
 
     [breakpoint.lg()]: {
       "> div": {
+        "a span": {
+          color: color.line.light,
+        },
         "&.titleSide": {
           display: "flex",
           flexDirection: "column",
@@ -90,6 +93,11 @@ export const Grid = styled(DSGrid)(
           "span, input": {
             color: `${color.brandPrimary.dark} !important`,
           },
+          "a span": {
+            color: `${color.brandSecondary.light} !important`,
+            fontSize: "14px",
+          },
+
           button: {
             width: "100%",
           },
@@ -111,6 +119,11 @@ export const Container = styled.div(({ theme: { spacing } }) => ({
   ".chatIcon": {
     marginRight: spacing.inline["2xs"],
   },
+}));
+export const Recaptcha = styled.div(({ theme: { spacing } }) => ({
+  display: "flex",
+  justifyContent: "center",
+  // width: "100%",
 }));
 
 export const Button = styled.div(
