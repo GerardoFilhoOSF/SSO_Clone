@@ -107,10 +107,13 @@ export const Grid = styled(DSGrid)(
   })
 );
 
-export const NewHeader = styled.div(({ theme: { spacing } }) => ({
+export const NewHeader = styled.div(({ theme: { breakpoint, spacing } }) => ({
   width: "100%",
   display: "flex",
   padding: spacing.inline["3xs"],
+  [breakpoint.lg()]: {
+    padding: `${spacing.inline["3xs"]} 0`,
+  },
 }));
 export const Container = styled.div(({ theme: { spacing } }) => ({
   display: "flex",

@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 export const DescriptionLogin = styled.div(
   ({ theme: { spacing, breakpoint } }) => ({
     padding: `60px ${spacing.inline["3xs"]}`,
+    margin: "auto",
 
     [breakpoint.lg()]: {
       padding: `0 ${spacing.stack["4xl"]}`,
