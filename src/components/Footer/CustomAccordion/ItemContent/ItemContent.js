@@ -1,28 +1,27 @@
 import React from "react";
 import { Text, Link } from "@ds/react";
 import * as S from "./ItemContent.style";
-import { phoneToHref, smsToHref } from "./../../../../utils/string";
+import { phoneToHref } from "utils/string";
+import { smsToHref } from "utils/string";
 
 const ItemContent = () => {
   return (
     <S.Container>
-      <S.Message variant="body-02-md">
-        Sempre que precisar, fale com a gente!
-      </S.Message>
+      <S.Message variant="body-02-md"></S.Message>
       <S.Section>
         <S.Item>
           <S.Divider orientation="vertical" />
           <S.Content>
             <S.Block>
-              <S.Title variant="headline-07">Central de Relacionamento</S.Title>
+              <S.Title variant="headline-07">Central de relacionamento</S.Title>
               <Text variant="caption-02">
                 Informações sobre o seu título, pagamento, resgate e outras
                 dúvidas.
               </Text>
             </S.Block>
             <S.Block>
-              <Link variant="primary-lg-01" href={phoneToHref("0800 272 2021")}>
-                0800 272 2021
+              <Link variant="primary-lg-01" href={phoneToHref("0800 702 4231")}>
+                0800 702 4231
               </Link>
               <Text variant="caption-02">
                 Das 8h às 21h, de segunda a sexta, exceto em feriados nacionais.
@@ -34,12 +33,64 @@ const ItemContent = () => {
           <S.Divider orientation="vertical" />
           <S.Content>
             <S.Block>
+              <S.Title variant="headline-07">
+                Para acionar ou <br></br>acompanhar o seguro
+              </S.Title>
+            </S.Block>
+            <S.Block>
+              <Link variant="primary-lg-01" href={phoneToHref("0800 722 2492")}>
+                0800 722 2492
+              </Link>
+            </S.Block>
+            <Text variant="caption-02">
+              Estamos aqui pra você 24h, a qualquer hora é só ligar.
+            </Text>
+          </S.Content>
+        </S.Item>
+        <S.Item>
+          <S.Divider orientation="vertical" />
+          <S.Content>
+            <S.Block>
+              <S.Title variant="headline-07">SAC</S.Title>
+            </S.Block>
+            <S.Block>
+              <Text variant="caption-02">
+                Informações, dúvidas, sugestões, reclamações e cancelamentos.
+              </Text>
+            </S.Block>
+            <S.Block>
+              <Link variant="primary-lg-01" href={phoneToHref("0800 702 4280")}>
+                0800 702 4280
+              </Link>
+              <span>
+                <Text variant="caption-02">Atendimento 24h</Text>
+              </span>
+            </S.Block>
+          </S.Content>
+        </S.Item>
+      </S.Section>
+      <S.Section>
+        <S.Item>
+          <S.Divider orientation="vertical" />
+          <S.Content>
+            <S.Block>
               <S.Title variant="headline-07">Atendimento ao surdo</S.Title>
+            </S.Block>
+            <S.Block>
+              <Link variant="primary-md-01">
+                Converse em libras com um atendente
+              </Link>
+              <span>
+                <Text variant="caption-02">
+                  Serviço exclusivo para pessoas com deficiência auditiva ou de
+                  fala.
+                </Text>
+              </span>
             </S.Block>
             <S.Block>
               <Text variant="body-01-sm">
                 <span>
-                  Envie um{" "}
+                  Se preferir, envie um{" "}
                   <Link
                     variant="primary-sm-01"
                     href={smsToHref("29734", "CSSAC")}
@@ -55,46 +106,6 @@ const ItemContent = () => {
                 ou ligue para 0800 702 4260 usando um aparelho adaptado com
                 teclado alfanumérico.
               </Text>
-            </S.Block>
-          </S.Content>
-        </S.Item>
-        <S.Item>
-          <S.Divider orientation="vertical" />
-          <S.Content>
-            <S.Block>
-              <S.Title variant="headline-07">SAC</S.Title>
-            </S.Block>
-            <S.Block>
-              <Text variant="caption-02">
-                Atendimento ao público 24h para informações gerais do seu
-                produto, dúvidas, sugestões ou reclamações.
-              </Text>
-            </S.Block>
-            <S.Block>
-              <Link variant="primary-lg-01" href={phoneToHref("0800 702 4280")}>
-                0800 702 4280
-              </Link>
-            </S.Block>
-          </S.Content>
-        </S.Item>
-      </S.Section>
-      <S.Section>
-        <S.Item>
-          <S.Divider orientation="vertical" />
-          <S.Content>
-            <S.Block>
-              <S.Title variant="headline-07">
-                Acionamento do Seguro de Acidentes Pessoais
-              </S.Title>
-              <Text variant="caption-02">
-                Para comunicar ou acompanhar o sinistro do seu seguro de
-                acidentes pessoais – Vida, ligue: 0800 722 2492 – Opções 4 - 2.
-              </Text>
-            </S.Block>
-            <S.Block>
-              <Link variant="primary-lg-01" href={phoneToHref("0800 722 2492")}>
-                0800 722 2492
-              </Link>
             </S.Block>
           </S.Content>
         </S.Item>
@@ -118,6 +129,7 @@ const ItemContent = () => {
                   nacionais.
                 </Text>
               </span>
+              <Link variant="primary-sm-01">Abrir ocorrência de Ouvidoria</Link>
             </S.Block>
           </S.Content>
         </S.Item>

@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 import { Text } from "@ds/react";
-import CustomDivider from "./../../../CustomDivider";
+import CustomDivider from "components/CustomDivider";
 
 export const Container = styled.div(() => ({
   display: "flex",
@@ -44,6 +44,7 @@ export const Item = styled.div(({ theme: { spacing, breakpoint } }) => ({
   width: "100%",
   boxSizing: "content-box",
   marginBottom: "60px",
+  lineHeight: spacing.inline["xs"],
 
   ":last-child": {
     marginBottom: 0,

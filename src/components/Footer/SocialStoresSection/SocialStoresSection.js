@@ -2,12 +2,12 @@ import React from "react";
 import { Text } from "@ds/react";
 import * as S from "./SocialStoresSection.style";
 
-import { ReactComponent as InstagramIcon } from "./../../../assets/icons/instagram.svg";
-import { ReactComponent as TwitterIcon } from "./../../../assets/icons/twitter.svg";
-import { ReactComponent as LinkedInIcon } from "./../../../assets/icons/linkedin.svg";
+import { ReactComponent as InstagramIcon } from "shared/react/assets/icons/instagram.svg";
+import { ReactComponent as TwitterIcon } from "shared/react/assets/icons/twitter.svg";
+import { ReactComponent as LinkedInIcon } from "shared/react/assets/icons/linkedin.svg";
 
-import { ReactComponent as AppStoreIcon } from "./../../../assets/icons/app-store.svg";
-import { ReactComponent as GooglePlayIcon } from "./../../../assets/icons/google-play.svg";
+import { ReactComponent as AppStoreIcon } from "shared/react/assets/icons/app-store.svg";
+import { ReactComponent as GooglePlayIcon } from "shared/react/assets/icons/google-play.svg";
 
 const SocialStoresSection = () => {
   return (

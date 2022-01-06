@@ -6,7 +6,7 @@ export const DescriptionLogin = styled.div(
     margin: "auto",
 
     [breakpoint.lg()]: {
-      padding: `0 ${spacing.stack["4xl"]}`,
+      padding: `${spacing.inline["3xs"]} ${spacing.stack["4xl"]}`,
       display: "flex",
       justifyContent: "center",
     },
@@ -22,7 +22,7 @@ export const Container = styled.div(({ theme: { breakpoint, spacing } }) => ({
   [breakpoint.lg()]: {
     padding: "16px 0",
     "&.texto": {
-      width: "40%",
+      width: "38%",
     },
     "&.logo": {
       display: "flex",

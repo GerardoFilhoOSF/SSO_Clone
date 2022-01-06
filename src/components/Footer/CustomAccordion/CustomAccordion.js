@@ -1,6 +1,6 @@
 import React from "react";
 import ItemContent from "./ItemContent";
-import { ReactComponent as PhoneBookIcon } from "./../../../assets/icons/phone-book.svg";
+import { ReactComponent as PhoneBookIcon } from "assets/icons/phone-book.svg";
 import * as S from "./CustomAccordion.style";
 
 const data = [

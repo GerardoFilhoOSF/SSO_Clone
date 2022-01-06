@@ -5,7 +5,7 @@ export const Container = styled.div(({ theme: { spacing, breakpoint } }) => ({
   padding: `0 ${spacing.inline["3xs"]}`,
 
   [breakpoint.lg()]: {
-    padding: `0 ${spacing.stack["4xl"]}`,
+    padding: `0 ${spacing.stack.xl}`,
   },
 }));
 

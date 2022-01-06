@@ -1,23 +1,23 @@
 import React from "react";
-import { Hidden } from "@ds/react";
+import * as S from "./Footer.style";
+import { Divider } from "@ds/react";
 
 import CustomAccordion from "./CustomAccordion";
-import Mobile from "./Mobile";
-import Desktop from "./Desktop";
-import { DESKTOP, MOBILE } from "constants/breakpoints";
-import * as S from "./Footer.style";
+import LinksSection from "./LinksSection";
+import DetailsSection from "./DetailsSection";
 
 const Footer = () => {
   return (
     <>
       <S.Footer data-label="footer section">
-        <CustomAccordion />
-        <Hidden only={DESKTOP}>
-          <Mobile />
-        </Hidden>
-        <Hidden only={[...MOBILE]}>
-          <Desktop />
-        </Hidden>
+        <S.FooterContentWrapper>
+          <CustomAccordion />
+          <S.FooterContent>
+            <LinksSection />
+            <Divider />
+            <DetailsSection />
+          </S.FooterContent>
+        </S.FooterContentWrapper>
       </S.Footer>
     </>
   );

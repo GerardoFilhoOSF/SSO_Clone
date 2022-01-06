@@ -7,17 +7,15 @@ export const Container = styled.div(({ theme: { spacing } }) => ({
   marginTop: spacing.stack.xs,
 }));
 
-export const SocialSection = styled.div(({ theme: { spacing, color } }) => ({
+export const SocialSection = styled.div(({ theme: { spacing } }) => ({
   display: "flex",
   flexDirection: "column",
   marginRight: spacing.inline["6xl"],
-  color: color.line.light,
 }));
 
-export const StoresSection = styled.div(({ theme: { color } }) => ({
+export const StoresSection = styled.div(() => ({
   display: "flex",
   flexDirection: "column",
-  color: color.line.light,
 }));
 
 export const IconsSection = styled.ul(({ theme: { spacing } }) => ({

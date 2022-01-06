@@ -10,7 +10,7 @@ const DescriptionLogin = () => {
         <Logo />
       </S.Container>
       <S.Container className="texto">
-        <Text variant="body-02-lg">
+        <Text variant="body-02-md">
           O jeito inteligente e digital de acompanhar seu consórcio: 2ª via de
           boleto, consulta de saldo, histórico de pagamento, consulta de cotas,
           lances, assembléias. Você no controle!

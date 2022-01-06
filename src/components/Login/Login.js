@@ -20,7 +20,7 @@ const Login = () => {
           <Logo />
           <S.Container>
             <ChatIcon className="chatIcon" />
-            <AccessibilityIcon />
+            <AccessibilityIcon className="accessIcon" />
           </S.Container>
         </S.NewHeader>
         <S.Grid className="teste">

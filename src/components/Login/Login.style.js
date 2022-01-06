@@ -65,6 +65,8 @@ export const Grid = styled(DSGrid)(
     },
 
     [breakpoint.lg()]: {
+      margin: `${spacing.inline["xs"]} ${spacing.inline["5xs"]} 0 0`,
+
       "> div": {
         "a span": {
           color: color.line.light,
@@ -73,6 +75,7 @@ export const Grid = styled(DSGrid)(
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          paddingLeft: 0,
         },
         "&.formSide": {
           background: color.line.light,
@@ -122,11 +125,13 @@ export const Container = styled.div(({ theme: { spacing } }) => ({
   ".chatIcon": {
     marginRight: spacing.inline["2xs"],
   },
+  ".chatIcon, .accessIcon": {
+    cursor: "pointer",
+  },
 }));
-export const Recaptcha = styled.div(({ theme: { spacing } }) => ({
+export const Recaptcha = styled.div(() => ({
   display: "flex",
   justifyContent: "center",
-  // width: "100%",
 }));
 
 export const Button = styled.div(
