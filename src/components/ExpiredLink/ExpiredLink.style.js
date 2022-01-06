@@ -1,14 +1,14 @@
 import styled from "styled-components/macro";
 import { Grid as DSGrid } from "@ds/react";
 
-export const Register = styled.div(({ theme: { color, breakpoint } }) => ({
+export const ExpiredLink = styled.div(({ theme: { color, breakpoint } }) => ({
   color: color.neutral["02"],
   [breakpoint.lg()]: {
     maxWidth: "100vw",
     maxHeight: "100%",
   },
 }));
-export const RegisterContent = styled.div(
+export const ExpiredLinkContent = styled.div(
   ({ theme: { breakpoint, spacing } }) => ({
     width: "100%",
     maxWidth: "1440px",
@@ -20,42 +20,26 @@ export const RegisterContent = styled.div(
     },
   })
 );
-
 export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
   display: "flex",
   justifyContent: "space-around",
   margin: "25px 10px 0",
+  ".title": {
+    fontSize: "28px",
+  },
 
   [breakpoint.lg()]: {
-    "> *": {
-      "div input.FormInput": {
-        width: "50%",
-      },
-      "button.FormButton": {
-        width: "50%",
-      },
-      " a span.Link": {
-        fontSize: "16px",
-      },
+    ".title": {
+      fontSize: "32px",
+    },
+    ".FormButton": {
+      width: "50%",
     },
   },
 }));
+
 export const AlignItems = styled.div(({ theme: { spacing } }) => ({
   display: "flex",
   flexDirection: "column",
   gap: spacing.stack.xs,
-}));
-export const Button = styled.div(({ theme: { breakpoint } }) => ({
-  display: "flex",
-  justifyContent: "space-around",
-
-  [breakpoint.xl()]: {
-    width: "50%",
-  },
-}));
-export const AlignInput = styled.div(({ theme: { breakpoint } }) => ({
-  width: "100%",
-  [breakpoint.xl()]: {
-    width: "50%",
-  },
 }));

@@ -1,6 +1,7 @@
 import * as S from "./Register.style";
 
 import { useState } from "react";
+
 import { ReactComponent as Password } from "assets/icons/password.svg";
 import { ReactComponent as Warning } from "assets/icons/warningg.svg";
 
@@ -8,7 +9,6 @@ import {
   Text,
   Divider,
   TextField,
-  FullDoubleButton,
   Feedback,
   Button,
   Recaptcha,
@@ -26,11 +26,17 @@ const Register = ({ ...args }) => {
           <S.Grid.Item xs={1} lg={1 / 3}>
             <S.AlignItems>
               <Text variant="Headline-04">Cadastre-se agora</Text>
-              <Text variant="body-02-lg">
+
+              <span>
                 Seus dados serão utilizados e armazenados para a sua segurança e
                 autenticação em nosso site. Podemos utilizar para outros fins,
-                que estão detalhados em nossa Política de Privacidade.
-              </Text>
+                que estão detalhados em nossa{" "}
+                <Link href="#" className="Link">
+                  Política de Privacidade
+                </Link>
+                .
+              </span>
+
               <Link variant="primary-md-02">&#8249; Voltar</Link>
             </S.AlignItems>
           </S.Grid.Item>
@@ -45,6 +51,7 @@ const Register = ({ ...args }) => {
 
               <TextField
                 className="FormInput"
+                mask="cpf-cnpj"
                 label="E o seu CPF?"
                 placeholder="Apenas números"
               />
@@ -74,21 +81,11 @@ const Register = ({ ...args }) => {
                 Assim, você não perde nenhuma oportunidade. Deseja receber?
               </Text>
 
-              <FullDoubleButton
-                variant="primary-01"
-                primaryProps={{
-                  children: "Sim",
-                  onClick: () => {
-                    console.log("Action");
-                  },
-                }}
-                secondaryProps={{
-                  children: "Não",
-                  onClick: () => {
-                    console.log("Action");
-                  },
-                }}
-              />
+              <S.Button>
+                <Button variant="secondary-md">Sim</Button>
+
+                <Button variant="secondary-md">Não</Button>
+              </S.Button>
 
               <Divider />
 
@@ -115,24 +112,26 @@ const Register = ({ ...args }) => {
                 color="#7F9398"
                 text="Pelo menos um caractere especial."
               />
-
+              <S.AlignInput>
+                <TextField
+                  {...args}
+                  type={show ? "text" : "password"}
+                  label="Informe sua senha"
+                  progressValue={20}
+                  iconLeft={<Password />}
+                  iconRight={
+                    show ? (
+                      <Link variant="primary-sm-02"> Ocultar senha </Link>
+                    ) : (
+                      <Link variant="primary-sm-02"> Mostrar senha </Link>
+                    )
+                  }
+                  placeholder="Informe sua senha"
+                  onClickIconRight={onToggleShow}
+                />
+              </S.AlignInput>
               <TextField
-                {...args}
-                type={show ? "text" : "password"}
-                label="Informe sua senha"
-                progressValue={20}
-                iconLeft={<Password />}
-                iconRight={
-                  show ? (
-                    <Link variant="primary-sm-02"> Ocultar senha </Link>
-                  ) : (
-                    <Link variant="primary-sm-02"> Mostrar senha </Link>
-                  )
-                }
-                placeholder="Informe sua senha"
-                onClickIconRight={onToggleShow}
-              />
-              <TextField
+                className="FormInput"
                 label="Informe sua senha"
                 iconLeft={<Password />}
                 placeholder="Informe sua senha"
