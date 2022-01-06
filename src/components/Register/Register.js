@@ -25,13 +25,15 @@ const Register = ({ ...args }) => {
         <S.Grid>
           <S.Grid.Item xs={1} lg={1 / 3}>
             <S.AlignItems>
-              <Text variant="Headline-04">Cadastre-se agora</Text>
+              <Text variant="Headline-04" className="title">
+                Cadastre-se agora
+              </Text>
 
               <span>
                 Seus dados serão utilizados e armazenados para a sua segurança e
                 autenticação em nosso site. Podemos utilizar para outros fins,
                 que estão detalhados em nossa{" "}
-                <Link href="#" className="Link">
+                <Link href="#" className="FormLink">
                   Política de Privacidade
                 </Link>
                 .
@@ -43,7 +45,9 @@ const Register = ({ ...args }) => {
 
           <S.Grid.Item xs={1} lg={1 / 2} className="FormSide">
             <S.AlignItems>
-              <Text variant="Headline-07">Dados pessoais</Text>
+              <Text variant="Headline-07" className="FormText">
+                Dados pessoais
+              </Text>
               <TextField
                 label="Qual seu nome completo?"
                 description="Sem usar abreviações, ok?"
@@ -59,6 +63,7 @@ const Register = ({ ...args }) => {
                 className="FormInput"
                 label="Data de nascimento"
                 placeholder="Apenas números"
+                mask="date"
               />
               <TextField
                 label="Nome completo da mãe"
@@ -67,11 +72,14 @@ const Register = ({ ...args }) => {
 
               <Divider />
 
-              <Text variant="Headline-07">Contato</Text>
+              <Text variant="Headline-07" className="FormText">
+                Contato
+              </Text>
               <TextField
                 className="FormInput"
                 label="Celular"
                 placeholder="Apenas números"
+                mask="phone"
               />
               <TextField label="E-mail" />
               <Text variant="body-02-sm">
@@ -89,7 +97,9 @@ const Register = ({ ...args }) => {
 
               <Divider />
 
-              <Text variant="Headline-07">Senha de acesso</Text>
+              <Text variant="Headline-07" className="FormText">
+                Senha de acesso
+              </Text>
               <Text variant="caption-01">Sua senha deve conter:</Text>
 
               <Feedback
@@ -121,9 +131,15 @@ const Register = ({ ...args }) => {
                   iconLeft={<Password />}
                   iconRight={
                     show ? (
-                      <Link variant="primary-sm-02"> Ocultar senha </Link>
+                      <Link variant="primary-sm-02" className="FormLink">
+                        {" "}
+                        Ocultar senha{" "}
+                      </Link>
                     ) : (
-                      <Link variant="primary-sm-02"> Mostrar senha </Link>
+                      <Link variant="primary-sm-02" className="FormLink">
+                        {" "}
+                        Mostrar senha{" "}
+                      </Link>
                     )
                   }
                   placeholder="Informe sua senha"
@@ -132,11 +148,15 @@ const Register = ({ ...args }) => {
               </S.AlignInput>
               <TextField
                 className="FormInput"
-                label="Informe sua senha"
+                label="Confirme a senha"
                 iconLeft={<Password />}
-                placeholder="Informe sua senha"
+                placeholder="Informe novamente"
               />
-              <Recaptcha sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"} />
+              <S.Recaptcha>
+                <Recaptcha
+                  sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
+                />
+              </S.Recaptcha>
               <Button className="FormButton" variant="primary-01-md">
                 Criar meu cadastro
               </Button>

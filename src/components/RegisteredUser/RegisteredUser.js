@@ -6,18 +6,11 @@ import { ReactComponent as Person } from "assets/icons/person.svg";
 import { ReactComponent as PhoneIcon } from "assets/icons/call.svg";
 import { ReactComponent as ChatIcon } from "assets/icons/chatlink.svg";
 
-import {
-  Text,
-  Divider,
-  TextField,
-  FullDoubleButton,
-  Button,
-  Link,
-} from "@ds/react";
+import { Text, Divider, TextField, Button, Link } from "@ds/react";
 import ChatButton from "utils/ContactMenuModal/ChatButton";
 import PhoneButton from "utils/ContactMenuModal/PhoneButton";
 
-const RegisteredUser = ({ ...args }) => {
+const RegisteredUser = ({}) => {
   const [show, setShow] = useState(false);
   const onToggleShow = () => setShow((prev) => !prev);
 
@@ -27,7 +20,7 @@ const RegisteredUser = ({ ...args }) => {
         <S.Grid>
           <S.Grid.Item xs={1} lg={1 / 3}>
             <S.AlignItems>
-              <Text variant="Headline-04">
+              <Text variant="Headline-04" className="Title">
                 Eba, você já tem um cadastro com a gente!
               </Text>
 
@@ -42,7 +35,7 @@ const RegisteredUser = ({ ...args }) => {
                 contato.
               </Text>
               <Text variant="Headline-07">Mudar a senha</Text>
-              <Text variant="body-02-sm">
+              <Text variant="body-02-sm" className="FormText">
                 Para cadastrar uma nova senha você pode solicitar um link por
                 e-mail ou um código via SMS.
               </Text>
@@ -82,12 +75,15 @@ const RegisteredUser = ({ ...args }) => {
                   iconLeft={<Password />}
                   iconRight={
                     show ? (
-                      <Link variant="primary-sm-02" className="teste">
+                      <Link variant="primary-sm-02" className="FormLink">
                         {" "}
                         Ocultar senha{" "}
                       </Link>
                     ) : (
-                      <Link variant="primary-sm-02"> Mostrar senha </Link>
+                      <Link variant="primary-sm-02" className="FormLink">
+                        {" "}
+                        Mostrar senha{" "}
+                      </Link>
                     )
                   }
                   placeholder="Senha"

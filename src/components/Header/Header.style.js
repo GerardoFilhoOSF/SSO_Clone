@@ -5,10 +5,10 @@ export const Header = styled.div(({ theme: { breakpoint, spacing } }) => ({
   display: "flex",
   padding: "16px 50px",
   maxWidth: "1440px",
-  margin: "0 auto",
+  margin: "auto",
 
   [breakpoint.lg()]: {
-    padding: "16px 120px",
+    padding: "16px 123px",
   },
 }));
 export const Container = styled.div(() => ({
@@ -19,4 +19,9 @@ export const Container = styled.div(() => ({
   ".chatIcon": {
     marginRight: "20px",
   },
+}));
+
+export const Gap = styled.div(({ theme: { color } }) => ({
+  paddingBottom: "2px",
+  background: color.neutral["06"],
 }));

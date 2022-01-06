@@ -25,9 +25,10 @@ export const RegisterContent = styled.div(
 export const Grid = styled(DSGrid)(({ theme: { breakpoint, spacing } }) => ({
   display: "flex",
   justifyContent: "space-around",
-  margin: `${spacing.inline["xs"]} ${spacing.inline["5xs"]} 0`,
+  margin: "25px 10px 0",
 
   [breakpoint.xl()]: {
+    margin: "25px 0px 0",
     "> *": {
       "div input.FormInput": {
         width: "50%",
@@ -38,10 +39,21 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, spacing } }) => ({
     },
   },
 }));
-export const AlignItems = styled.div(({ theme: { spacing } }) => ({
+export const AlignItems = styled.div(({ theme: { spacing, color } }) => ({
   display: "flex",
   flexDirection: "column",
   gap: spacing.stack.xs,
+  ".Title": {
+    fontSize: "32px",
+  },
+  ".FormLink": {
+    color: color.brandSecondary.light,
+    fontSize: "14px",
+  },
+  "a span": {
+    fontSize: "16px",
+    textDecoration: "none",
+  },
 }));
 
 export const Button = styled.div(({ theme: { breakpoint } }) => ({
@@ -50,6 +62,7 @@ export const Button = styled.div(({ theme: { breakpoint } }) => ({
 
   [breakpoint.xl()]: {
     width: "50%",
+    justifyContent: "space-between",
   },
 }));
 
