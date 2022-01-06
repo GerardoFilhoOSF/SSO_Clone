@@ -7,7 +7,7 @@ import RegisterPage from "./pages/RegisterPage";
 function App() {
   return (
     <ThemeProvider theme={cnpSeguradora}>
-      {/* <LoginPage /> */}
+      <LoginPage />
       <RegisterPage />
     </ThemeProvider>
   );

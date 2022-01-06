@@ -8,11 +8,7 @@ import { ReactComponent as ChatIcon } from "assets/icons/chat-header.svg";
 import { ReactComponent as AccessibilityIcon } from "assets/icons/signs-language.svg";
 import { ReactComponent as Logo } from "assets/images/Logo-Footer.svg";
 
-// import { X_MOBILE, X_DESKTOP } from "./../../constants/breakpoints";
-
 import * as S from "./Login.style";
-// import Footer from "components/Footer";
-// import DescriptionLogin from "components/DescriptionLogin";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -38,6 +34,8 @@ const Login = () => {
           </S.Grid.Item>
           <S.Grid.Item xs={1} lg={1 / 2} className="formSide">
             <TextField
+              error={false}
+              errorMessage="CPF/CNPJ ou senha inválida"
               label="Digite seu CPF ou CNPJ"
               iconLeft={<Person />}
               placeholder="Apenas números"
@@ -49,9 +47,13 @@ const Login = () => {
               iconLeft={<Password />}
               iconRight={
                 show ? (
-                  <Link variant="primary-sm-02"> Ocultar senha </Link>
+                  <Link variant="primary-sm-02" className="showPassword">
+                    Ocultar senha
+                  </Link>
                 ) : (
-                  <Link variant="primary-sm-02"> Mostrar senha </Link>
+                  <Link variant="primary-sm-02" className="showPassword">
+                    Mostrar senha
+                  </Link>
                 )
               }
               placeholder="Senha"
@@ -64,10 +66,12 @@ const Login = () => {
             >
               Esqueci minha senha
             </Link>
-            <Recaptcha
-              className="recaptcha"
-              sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
-            />
+            <S.Recaptcha>
+              <Recaptcha
+                className="recaptcha"
+                sitekey={"6LdSLSQcAAAAAKrR_GxG_y8JJK4b1lVCiiALBYaA"}
+              />
+            </S.Recaptcha>
             <S.Button>
               <Button variant="primary-01-md" className="primary">
                 Acessar
@@ -81,8 +85,6 @@ const Login = () => {
           </S.Grid.Item>
         </S.Grid>
       </S.LoginContent>
-      {/* <DescriptionLogin /> */}
-      {/* <Footer /> */}
     </S.Login>
   );
 };
