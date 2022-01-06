@@ -10,6 +10,7 @@ import LinkExpirouPerdeuValidade from "components/LinkExpirouPerdeuValidade";
 import InscricaoBloqueada from "components/InscricaoBloqueada";
 import Footer from "components/Footer";
 import EmailVerificadoSucesso from "components/EmailVerificadoSucesso";
+import VerificacaoTelefone from "components/VerificacaoTelefone";
 
 export default function RegisterPage() {
   return (
@@ -21,8 +22,9 @@ export default function RegisterPage() {
       <EmailVerification />
       <ExpiredLink />
       <LinkExpirouPerdeuValidade />
-      <InscricaoBloqueada /> */}
-      <EmailVerificadoSucesso />
+      <InscricaoBloqueada />
+      <EmailVerificadoSucesso /> */}
+      <VerificacaoTelefone />
       <Footer />
     </>
   );

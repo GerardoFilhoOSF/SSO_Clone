@@ -1,6 +1,6 @@
 import { Button, Text } from "@ds/react";
 import * as S from "./EmailVerificadoSucesso.style";
-import { ReactComponent as ChatIcon } from "assets/icons/chatlink.svg";
+import Check from "assets/icons/success-check.svg";
 
 const EmailVerificadoSucesso = ({}) => {
   return (
@@ -16,18 +16,17 @@ const EmailVerificadoSucesso = ({}) => {
           <S.Grid.Item xs={1} lg={1 / 2} className="FormSide">
             <S.AlignItems>
               <S.ImagesSection>
-                <img src={ChatIcon} />
+                <img src={Check} />
 
-                <Text variant="headline-07">
-                  Para finalizar, precisamos verificar o número do seu celular,
-                  tudo bem?
+                <Text variant="headline-07" className="TextForm">
+                  E-mail verificado com sucesso.
                 </Text>
               </S.ImagesSection>
               <Text variant="body-01-lg">
                 Para finalizar, precisamos verificar o número do seu celular,
                 tudo bem?
               </Text>
-              <Text variant="body-01-lg">
+              <Text variant="body-02-lg">
                 Queremos enviar um código por SMS no número: (61) 9****-**78
               </Text>
 

@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
+
 import { Grid as DSGrid } from "@ds/react";
 
-export const EmailVerificadoSucesso = styled.div(
+export const VerificacaoTelefone = styled.div(
   ({ theme: { color, breakpoint } }) => ({
     color: color.neutral["02"],
     [breakpoint.lg()]: {
@@ -10,7 +11,7 @@ export const EmailVerificadoSucesso = styled.div(
     },
   })
 );
-export const EmailVerificationContent = styled.div(
+export const VerificacaoTelefoneContent = styled.div(
   ({ theme: { breakpoint, spacing } }) => ({
     width: "100%",
     maxWidth: "1440px",
@@ -35,10 +36,15 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
     ".title": {
       fontSize: "32px",
     },
-    ".FormButton": {
+    "div input.FormInput": {
       width: "50%",
     },
   },
+}));
+export const AlignItems = styled.div(({ theme: { spacing } }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: spacing.stack.xs,
 }));
 export const ImagesSection = styled.ul(({ theme: { spacing } }) => ({
   display: "flex",
@@ -46,10 +52,4 @@ export const ImagesSection = styled.ul(({ theme: { spacing } }) => ({
   ".TextForm": {
     textTransform: "none",
   },
-}));
-
-export const AlignItems = styled.div(({ theme: { spacing } }) => ({
-  display: "flex",
-  flexDirection: "column",
-  gap: spacing.stack.xs,
 }));
