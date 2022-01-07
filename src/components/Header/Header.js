@@ -10,11 +10,13 @@ const Header = () => {
   return (
     <>
       <S.Header>
-        <S.Container>
+        <S.Container2>
           <Link variant="primary-md-02" className="Link">
             &#8249; Voltar
           </Link>
-          <CNPlogo />
+        </S.Container2>
+        <S.Container>
+          <CNPlogo className="logo" />
           <S.ContainerImg>
             <ChatIcon className="chatIcon" />
             <AccessibilityIcon />
