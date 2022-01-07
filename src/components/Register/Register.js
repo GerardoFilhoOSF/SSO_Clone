@@ -39,7 +39,9 @@ const Register = ({ ...args }) => {
                 .
               </span>
 
-              <Link variant="primary-md-02">&#8249; Voltar</Link>
+              <Link variant="primary-md-02" className="Link">
+                &#8249; Voltar
+              </Link>
             </S.AlignItems>
           </S.Grid.Item>
 

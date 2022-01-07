@@ -42,25 +42,36 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
     },
   },
 }));
-export const AlignItems = styled.div(({ theme: { spacing, color } }) => ({
-  display: "flex",
-  flexDirection: "column",
-  gap: spacing.stack.xs,
-  ".title": {
-    fontSize: "32px",
-  },
-  ".FormText": {
-    fontSize: "24px",
-  },
-  ".FormLink": {
-    color: color.brandSecondary.light,
-    fontSize: "14px",
-  },
-  "a span": {
-    fontSize: "14px",
-    textDecoration: "none",
-  },
-}));
+export const AlignItems = styled.div(
+  ({ theme: { breakpoint, spacing, color } }) => ({
+    display: "flex",
+    flexDirection: "column",
+    gap: spacing.stack.xs,
+    ".title": {
+      fontSize: "32px",
+    },
+    ".FormText": {
+      fontSize: "24px",
+    },
+    ".FormLink": {
+      color: color.brandSecondary.light,
+      fontSize: "14px",
+    },
+    "a span": {
+      fontSize: "14px",
+      textDecoration: "none",
+    },
+    ".Link span": {
+      display: "none",
+    },
+
+    [breakpoint.lg()]: {
+      ".Link span": {
+        display: "block",
+      },
+    },
+  })
+);
 export const Button = styled.div(({ theme: { breakpoint } }) => ({
   display: "flex",
   justifyContent: "space-around",

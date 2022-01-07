@@ -24,7 +24,9 @@ const RegisteredUser = ({}) => {
                 Eba, você já tem um cadastro com a gente!
               </Text>
 
-              <Link variant="primary-md-02">&#8249; Voltar</Link>
+              <Link variant="primary-md-02" className="Link">
+                &#8249; Voltar
+              </Link>
             </S.AlignItems>
           </S.Grid.Item>
 
@@ -97,6 +99,7 @@ const RegisteredUser = ({}) => {
               <Text variant="Headline-07">Fale com a nossa Central</Text>
               <Text variant="body-02-sm">Por telefone, ligue para</Text>
               <PhoneButton
+                className="Phone"
                 icon={<PhoneIcon />}
                 number="0800 702 4280"
                 subtitle="Atendimento 24h, todos os dias."
