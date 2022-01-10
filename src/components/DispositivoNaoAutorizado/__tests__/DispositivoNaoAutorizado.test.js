@@ -1,12 +1,12 @@
 import renderWithContext from "shared/react/test/renderWithContext";
 
-import EmailVerificadoSucesso from "../EmailVerificadoSucesso";
+import DispositivoNaoAutorizado from "../DispositivoNaoAutorizado";
 
-describe("<EmailVerificadoSucesso />", () => {
+describe("<DispositivoNaoAutorizado />", () => {
   beforeEach(() => jest.clearAllMocks());
 
   xit("Should render correctly", () => {
-    const { container } = renderWithContext(<EmailVerificadoSucesso />);
+    const { container } = renderWithContext(<DispositivoNaoAutorizado />);
     expect(container).toBeInTheDocument();
   });
 });

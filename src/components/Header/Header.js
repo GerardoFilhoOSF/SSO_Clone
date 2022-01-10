@@ -3,9 +3,9 @@ import React from "react";
 
 import { Link } from "@ds/react";
 
-import { ReactComponent as CNPlogo } from "@root/assets/images/Logo-CNP.svg";
-import { ReactComponent as ChatIcon } from "@root/assets/icons/chatblue.svg";
-import { ReactComponent as AccessibilityIcon } from "@root/assets/icons/signs-languageblue.svg";
+import { ReactComponent as CNPlogo } from "assets/images/Logo-CNP.svg";
+import { ReactComponent as ChatIcon } from "assets/icons/chatblue.svg";
+import { ReactComponent as AccessibilityIcon } from "assets/icons/signs-languageblue.svg";
 const Header = () => {
   return (
     <>

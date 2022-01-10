@@ -1,12 +1,12 @@
 import renderWithContext from "shared/react/test/renderWithContext";
 
-import ExpiredLink from "../TentativasExcedidas";
+import AutorizarDispositivo from "../AutorizarDispositivo";
 
-describe("<ExpiredLink />", () => {
+describe("<AutorizarDispositivo />", () => {
   beforeEach(() => jest.clearAllMocks());
 
   xit("Should render correctly", () => {
-    const { container } = renderWithContext(<ExpiredLink />);
+    const { container } = renderWithContext(<AutorizarDispositivo />);
     expect(container).toBeInTheDocument();
   });
 });

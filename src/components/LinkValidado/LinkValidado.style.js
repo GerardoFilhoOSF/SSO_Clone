@@ -1,24 +1,23 @@
 import styled from "styled-components/macro";
 import { Grid as DSGrid } from "@ds/react";
 
-export const DispositivoNaoAutorizado = styled.div(
-  ({ theme: { breakpoint } }) => ({
-    maxWidth: "1440px",
-    margin: "36px 16px",
-    [breakpoint.lg()]: {
-      margin: "auto",
-      padding: "36px 0",
-      ".leftSide": {
-        paddingLeft: "80px",
-        width: "65%",
-      },
-      ".subtitle": {
-        lineHeight: "32px",
-        marginBottom: "20px",
-      },
+export const LinkValidado = styled.div(({ theme: { breakpoint } }) => ({
+  maxWidth: "1440px",
+  margin: "36px 16px",
+  [breakpoint.lg()]: {
+    margin: "auto",
+    padding: "36px 0",
+    ".leftSide": {
+      paddingLeft: "120px",
+      width: "65%",
+      lineHeight: "48px",
     },
-  })
-);
+    ".subtitle": {
+      lineHeight: "32px",
+      marginBottom: "20px",
+    },
+  },
+}));
 export const Container = styled.div(({ theme: { breakpoint } }) => ({
   justifyContent: "flex-start",
   width: "100%",

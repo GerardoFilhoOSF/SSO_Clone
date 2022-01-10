@@ -40,10 +40,10 @@ export const CustomAccordion = styled(Accordion)(({ theme: { color } }) => ({
 }));
 
 export const FullDivider = styled(Divider)({
-  width: "100%",
+  width: "99.1%",
 
   "@media screen and (min-width: 1440px)": {
-    width: "100vw",
-    transform: "translateX(calc((1440px - 100vw) / 2))",
+    width: "92%",
+    transform: "translateX(calc((1440px - 100%) / 2))",
   },
 });

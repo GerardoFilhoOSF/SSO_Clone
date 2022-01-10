@@ -9,6 +9,7 @@ import { ReactComponent as AccessibilityIcon } from "assets/icons/signs-language
 import { ReactComponent as Logo } from "assets/images/Logo-Footer.svg";
 
 import * as S from "./Login.style";
+import Footer from "components/Footer";
 
 const Login = () => {
   const [show, setShow] = useState(false);

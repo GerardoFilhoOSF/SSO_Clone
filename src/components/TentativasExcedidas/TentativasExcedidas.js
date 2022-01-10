@@ -1,13 +1,18 @@
+import Header from "components/Header";
+import Footer from "components/Footer";
+
+import { Link, Text } from "@ds/react";
+
 import * as S from "./TentativasExcedidas.style";
 
-import { Button, Link, Text } from "@ds/react";
-const ExpiredLink = () => {
+const TentativasExcedidas = () => {
   return (
-    <S.ExpiredLink>
-      <S.ExpiredLinkContent>
+    <S.TentativasExcedidas>
+      <Header />
+      <S.TentativasExcedidasContent>
         <S.Grid>
           <S.Grid.Item xs={1} lg={1 / 3}>
-            <Text variant="Headline-04" className="title">
+            <Text variant="headline-04" className="title">
               O número de tentativas de login foi atingido
             </Text>
             <Link variant="primary-md-02" className="Link">
@@ -35,9 +40,10 @@ const ExpiredLink = () => {
             </S.AlignItems>
           </S.Grid.Item>
         </S.Grid>
-      </S.ExpiredLinkContent>
-    </S.ExpiredLink>
+      </S.TentativasExcedidasContent>
+      <Footer />
+    </S.TentativasExcedidas>
   );
 };
 
-export default ExpiredLink;
+export default TentativasExcedidas;

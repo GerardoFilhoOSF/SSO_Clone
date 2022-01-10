@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { Grid as DSGrid } from "@ds/react";
 
-export const TentativasExcedidas = styled.div(
+export const AutorizarDispositivo = styled.div(
   ({ theme: { color, breakpoint } }) => ({
     color: color.neutral["02"],
     [breakpoint.lg()]: {
@@ -10,7 +10,7 @@ export const TentativasExcedidas = styled.div(
     },
   })
 );
-export const TentativasExcedidasContent = styled.div(
+export const AutorizarDispositivoContent = styled.div(
   ({ theme: { breakpoint, spacing } }) => ({
     width: "100%",
     maxWidth: "1440px",
@@ -26,14 +26,12 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
   display: "flex",
   justifyContent: "space-around",
   margin: "25px 10px 0",
-  "a.forgot": {
-    color: `${color.brandSecondary.light} !important`,
-    fontSize: "14px",
-  },
+
   ".title": {
     fontSize: "28px",
     textTransform: "none",
     marginBottom: "24px",
+    width: "90%",
   },
   ".Link span": {
     display: "none",
@@ -48,7 +46,6 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
     ".title": {
       fontSize: "32px",
       marginBottom: "48px",
-      width: "90%",
     },
     ".FormButton": {
       width: "50%",
@@ -61,3 +58,22 @@ export const AlignItems = styled.div(({ theme: { spacing } }) => ({
   flexDirection: "column",
   gap: spacing.stack.xs,
 }));
+
+export const Button = styled.div(
+  ({ theme: { breakpoint, spacing, color } }) => ({
+    display: "flex",
+    flexDirection: "column",
+    margin: `${spacing.inline["3xs"]} 0`,
+    ".primary": {
+      marginBottom: "24px",
+    },
+
+    [breakpoint.lg()]: {
+      flexDirection: "row",
+      ".primary": {
+        marginBottom: 0,
+        marginRight: "24px",
+      },
+    },
+  })
+);

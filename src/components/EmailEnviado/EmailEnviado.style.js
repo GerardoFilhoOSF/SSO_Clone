@@ -1,16 +1,14 @@
 import styled from "styled-components/macro";
 import { Grid as DSGrid } from "@ds/react";
 
-export const TentativasExcedidas = styled.div(
-  ({ theme: { color, breakpoint } }) => ({
-    color: color.neutral["02"],
-    [breakpoint.lg()]: {
-      maxWidth: "100vw",
-      maxHeight: "100%",
-    },
-  })
-);
-export const TentativasExcedidasContent = styled.div(
+export const EmailEnviado = styled.div(({ theme: { color, breakpoint } }) => ({
+  color: color.neutral["02"],
+  [breakpoint.lg()]: {
+    maxWidth: "100vw",
+    maxHeight: "100%",
+  },
+}));
+export const EmailEnviadoContent = styled.div(
   ({ theme: { breakpoint, spacing } }) => ({
     width: "100%",
     maxWidth: "1440px",
@@ -26,33 +24,28 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
   display: "flex",
   justifyContent: "space-around",
   margin: "25px 10px 0",
-  "a.forgot": {
-    color: `${color.brandSecondary.light} !important`,
-    fontSize: "14px",
-  },
+  fontSize: "32px",
   ".title": {
     fontSize: "28px",
     textTransform: "none",
-    marginBottom: "24px",
-  },
-  ".Link span": {
-    display: "none",
+    width: "90%",
   },
 
   [breakpoint.lg()]: {
     marginLeft: 0,
-    ".Link span": {
-      display: "flex",
-      textDecorationLine: "none",
-    },
     ".title": {
       fontSize: "32px",
-      marginBottom: "48px",
-      width: "90%",
     },
     ".FormButton": {
       width: "50%",
     },
+  },
+}));
+export const ImagesSection = styled.ul(({ theme: { spacing } }) => ({
+  display: "flex",
+  alignItems: "center",
+  ".TextForm": {
+    textTransform: "none",
   },
 }));
 
