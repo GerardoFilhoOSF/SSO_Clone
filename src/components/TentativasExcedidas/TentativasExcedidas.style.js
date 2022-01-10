@@ -26,11 +26,19 @@ export const Grid = styled(DSGrid)(({ theme: { breakpoint, color } }) => ({
   margin: "25px 10px 0",
   ".title": {
     fontSize: "28px",
+    marginBottom: "24px",
+  },
+  ".Link span": {
+    display: "none",
   },
 
   [breakpoint.lg()]: {
+    ".Link span": {
+      textDecorationLine: "none",
+    },
     ".title": {
       fontSize: "32px",
+      marginBottom: "48px",
     },
     ".FormButton": {
       width: "50%",
