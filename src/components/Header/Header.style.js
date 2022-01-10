@@ -1,33 +1,67 @@
 import styled from "styled-components/macro";
 
-export const Header = styled.header(({ theme: { color } }) => ({
-  backgroundColor: color.line.light,
-}));
-
-export const HeaderContent = styled.div(({ theme: { color, breakpoint } }) => ({
-  maxWidth: "1440px",
+export const Header = styled.div(({ theme: { breakpoint, spacing } }) => ({
   width: "100%",
+  padding: "16px",
+  maxWidth: "1440px",
   margin: "auto",
-
   display: "flex",
-  alignItems: "center",
   justifyContent: "space-between",
-  height: "64px",
 
-  backgroundColor: color.line.light,
+  " .Link span": {
+    fontSize: "16px",
+    textDecoration: "none",
+    width: "60px",
+  },
 
   [breakpoint.lg()]: {
-    height: "100px",
+    padding: "16px 123px",
+    " .Link span": {
+      display: "none",
+      justifyItems: "inherit",
+    },
+  },
+}));
+export const Container = styled.div(({ theme: { breakpoint } }) => ({
+  width: "100%",
+  display: "flex",
+  justifyContent: "space-between",
+  marginLeft: "20%",
+
+  ".logo": {
+    width: "33%",
+    minWidth: "49%",
+  },
+
+  [breakpoint.lg()]: {
+    marginLeft: 0,
+
+    ".logo": {
+      width: "10%",
+      minWidth: "100px",
+    },
+    justifyContent: "space-between",
+  },
+}));
+export const Container2 = styled.div(({ theme: { breakpoint } }) => ({
+  display: "flex",
+  alignItems: "center",
+  paddingRight: "8",
+  [breakpoint.lg()]: {
+    paddingRight: 0,
   },
 }));
 
-export const SectionMenu = styled.div(({ theme: { breakpoint, spacing } }) => ({
-  display: "flex",
-  alignItems: "center",
-  padding: 0,
-  marginLeft: spacing.stack["3xs"],
-
-  [breakpoint.lg()]: {
-    marginLeft: spacing.stack.xl,
+export const ContainerImg = styled.div(({ theme: { breakpoint } }) => ({
+  marginTop: "16px",
+  ".chatIcon": {
+    marginRight: "20px",
   },
+
+  [breakpoint.lg()]: {},
+}));
+
+export const Gap = styled.div(({ theme: { color } }) => ({
+  paddingBottom: "2px",
+  background: color.neutral["06"],
 }));
