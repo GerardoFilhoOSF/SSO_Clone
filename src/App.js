@@ -6,6 +6,7 @@ import Header from "components/Header";
 import EmailVerificadoSucesso from "components/EmailVerificadoSucesso";
 
 import ExpiredLink from "components/ExpiredLink";
+import TentativasExcedidas from "components/TentativasExcedidas";
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       {/* <RegisterPage /> */}
       {/* <RegisteredUserPage /> */}
       <Header />
-      <EmailVerificadoSucesso />
+      <TentativasExcedidas />
       <Header />
-      <ExpiredLink /> {/* esse */}
+      <ExpiredLink />
+      <Header />
+      <EmailVerificadoSucesso />
     </ThemeProvider>
   );
 }
