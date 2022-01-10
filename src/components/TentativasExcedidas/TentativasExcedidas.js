@@ -10,6 +10,9 @@ const ExpiredLink = () => {
             <Text variant="Headline-04" className="title">
               O número de tentativas de login foi atingido
             </Text>
+            <Link variant="primary-md-02" className="Link">
+              &#8249; Voltar
+            </Link>
           </S.Grid.Item>
 
           <S.Grid.Item xs={1} lg={1 / 2} className="FormSide">
